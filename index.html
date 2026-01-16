@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Barakunda | Premium Skill-Based Gaming Platform 2024</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="description" content="Barakunda - Premium skill-based gaming platform. Experience competitive gaming with real-time tournaments and professional gameplay.">
+  <meta name="keywords" content="barakunda, skill gaming, competitive games, online tournaments">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="https://www.barakunda.com/assets/png/logo-5c1b147a.png" type="image/png">
+  <meta name="theme-color" content="#D4AF37">
+  
+  <style>
+    :root {
+      --gold-primary: #D4AF37;
+      --gold-light: #F4E4C1;
+      --gold-dark: #B8960F;
+      --white: #FFFFFF;
+      --off-white: #F8F8F8;
+      --dark: #1A1A1A;
+      --shadow-gold: rgba(212, 175, 55, 0.3);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, var(--dark) 0%, #2a2a2a 100%);
+      color: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Header */
+    .header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(26, 26, 26, 0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--gold-primary);
+      z-index: 1000;
+      padding: 0.75rem 0;
+    }
+
+    .header-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      height: 45px;
+      width: auto;
+    }
+
+    .nav {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-link {
+      color: var(--gold-light);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+      font-size: 0.95rem;
+    }
+
+    .nav-link:hover {
+      color: var(--gold-primary);
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: var(--gold-primary);
+      transition: all 0.3s;
+      border-radius: 2px;
+    }
+
+    /* Main Container */
+    .main {
+      padding-top: 70px;
+      min-height: 100vh;
+    }
+
+    /* Banner */
+    .banner {
+      max-width: 1400px;
+      margin: 0 auto 3rem;
+      padding: 0 1.5rem;
+    }
+
+    .banner-img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 10px 40px var(--shadow-gold);
+    }
+
+    /* Hero Section */
+    .hero {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-light) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+
+    .hero-subtitle {
+      font-size: 1.3rem;
+      color: var(--gold-light);
+      margin-bottom: 2rem;
+      font-weight: 300;
+    }
+
+    .hero-description {
+      max-width: 800px;
+      margin: 0 auto 3rem;
+      color: var(--off-white);
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    /* Buttons */
+    .btn-group {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+
+    .btn {
+      padding: 0.9rem 2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1rem;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-dark) 100%);
+      color: var(--dark);
+      box-shadow: 0 5px 20px var(--shadow-gold);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px var(--shadow-gold);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--gold-primary);
+      color: var(--gold-primary);
+    }
+
+    .btn-outline:hover {
+      background: var(--gold-primary);
+      color: var(--dark);
+    }
+
+    /* Content Sections */
+    .section {
+      max-width: 1400px;
+      margin: 4rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      color: var(--gold-primary);
+      text-align: center;
+      margin-bottom: 3rem;
+      position: relative;
+      padding-bottom: 1rem;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: var(--gold-primary);
+    }
+
+    /* Grid Layouts */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      border-radius: 12px;
+      padding: 2rem;
+      transition: all 0.3s;
+    }
+
+    .card:hover {
+      border-color: var(--gold-primary);
+      box-shadow: 0 5px 25px var(--shadow-gold);
+      transform: translateY(-5px);
+    }
+
+    .card-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: var(--gold-primary);
+      margin-bottom: 0.75rem;
+    }
+
+    .card-text {
+      color: var(--off-white);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* Features List */
+    .features-list {
+      list-style: none;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .features-list li {
+      padding: 1rem 1rem 1rem 3rem;
+      background: rgba(212, 175, 55, 0.05);
+      border-left: 3px solid var(--gold-primary);
+      border-radius: 6px;
+      position: relative;
+      color: var(--off-white);
+    }
+
+    .features-list li::before {
+      content: '◆';
+      position: absolute;
+      left: 1rem;
+      color: var(--gold-primary);
+      font-size: 1.2rem;
+    }
+
+    /* Disclaimer */
+    .disclaimer {
+      background: rgba(212, 175, 55, 0.1);
+      border: 2px solid var(--gold-primary);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      margin: 3rem 0;
+    }
+
+    .disclaimer-text {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--gold-light);
+    }
+
+    /* Footer */
+    .footer {
+      background: rgba(26, 26, 26, 0.95);
+      border-top: 1px solid var(--gold-primary);
+      padding: 2rem 1.5rem;
+      margin-top: 4rem;
+    }
+
+    .footer-links {
+      max-width: 1400px;
+      margin: 0 auto 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-link {
+      color: var(--gold-light);
+      text-decoration: none;
+      transition: color 0.3s;
+      font-size: 0.95rem;
+    }
+
+    .footer-link:hover {
+      color: var(--gold-primary);
+    }
+
+    .footer-copyright {
+      text-align: center;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.9rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(212, 175, 55, 0.2);
+    }
+
+    /* Legal Pages */
+    .legal-page {
+      display: none;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      padding-top: 90px;
+    }
+
+    .legal-page.active {
+      display: block;
+    }
+
+    .legal-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .back-btn {
+      background: rgba(212, 175, 55, 0.1);
+      border: 1px solid var(--gold-primary);
+      color: var(--gold-primary);
+      padding: 0.75rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.5rem;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+    }
+
+    .back-btn:hover {
+      background: var(--gold-primary);
+      color: var(--dark);
+    }
+
+    .legal-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--gold-primary);
+    }
+
+    .legal-content {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      border-radius: 12px;
+      padding: 2rem;
+    }
+
+    .legal-section {
+      margin-bottom: 2rem;
+    }
+
+    .legal-section h3 {
+      font-family: 'Playfair Display', serif;
+      color: var(--gold-primary);
+      margin-bottom: 1rem;
+    }
+
+    .legal-section p,
+    .legal-section li {
+      color: var(--off-white);
+      line-height: 1.7;
+      margin-bottom: 0.75rem;
+    }
+
+    .legal-section ul {
+      padding-left: 1.5rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+      }
+
+      .nav {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 250px;
+        height: calc(100vh - 70px);
+        background: rgba(26, 26, 26, 0.98);
+        flex-direction: column;
+        padding: 2rem 0;
+        transition: right 0.3s;
+        border-left: 1px solid var(--gold-primary);
+      }
+
+      .nav.active {
+        right: 0;
+      }
+
+      .nav-link {
+        width: 100%;
+        padding: 1rem 2rem;
+        border-left: 3px solid transparent;
+      }
+
+      .nav-link:hover {
+        background: rgba(212, 175, 55, 0.1);
+        border-left-color: var(--gold-primary);
+      }
+
+      .hero-title {
+        font-size: 2rem;
+      }
+
+      .btn-group {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <img src="https://www.barakunda.com/assets/png/logo-5c1b147a.png" alt="Barakunda Logo" class="logo">
+      
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <nav class="nav" id="nav">
+        <a href="#home" onclick="showPage('home')" class="nav-link">Home</a>
+        <a href="#privacy" onclick="showPage('privacy')" class="nav-link">Privacy</a>
+        <a href="#terms" onclick="showPage('terms')" class="nav-link">Terms</a>
+        <a href="#contact" onclick="showPage('contact')" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Home Page -->
+  <main class="main" id="home-page">
+    
+    <!-- Banner -->
+    <section class="banner">
+      <img src="https://ossimg.big-mumadmin888.com/bigmumbai/banner/Banner_20250914153236sbhc.png" alt="Barakunda Platform" class="banner-img">
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1 class="hero-title">BARAKUNDA</h1>
+      <p class="hero-subtitle">Premium Skill-Based Gaming Platform</p>
+      <p class="hero-description">
+        Experience excellence in competitive gaming. Barakunda offers a sophisticated platform where skill meets strategy, featuring premium tournaments and professional-grade gameplay for discerning players.
+      </p>
+      
+      <div class="btn-group">
+        <a href="https://www.barakunda.com/#/register?invitationCode=664277406367" class="btn btn-primary" target="_blank">
+          ✦ Register Now
+        </a>
+        <a href="https://www.barakunda.com/#/register?invitationCode=664277406367" class="btn btn-outline" target="_blank">
+          ◆ Login
+        </a>
+        <a href="https://t.me/+x2Caz7Kaq6k4NmI1" class="btn btn-outline" target="_blank">
+          ✧ Join Community
+        </a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section">
+      <h2 class="section-title">Why Barakunda</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="card-icon">⚜️</div>
+          <h3 class="card-title">Premium Quality</h3>
+          <p class="card-text">Expertly crafted gaming experiences with professional-grade features and seamless performance.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🛡️</div>
+          <h3 class="card-title">Secure Platform</h3>
+          <p class="card-text">Advanced encryption and verified accounts ensure protected gaming environment and fair play.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">👑</div>
+          <h3 class="card-title">Elite Tournaments</h3>
+          <p class="card-text">Compete in exclusive events with sophisticated matchmaking and professional tournament structures.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section">
+      <h2 class="section-title">Platform Features</h2>
+      <ul class="features-list">
+        <li><strong>Strategic Gameplay</strong> – Skill-based mechanics rewarding expertise and tactical thinking</li>
+        <li><strong>Real-Time Competitions</strong> – Live tournaments with professional-grade infrastructure</li>
+        <li><strong>Advanced Analytics</strong> – Comprehensive performance tracking and detailed statistics</li>
+        <li><strong>Secure Transactions</strong> – Protected payment processing with industry-standard encryption</li>
+        <li><strong>Premium Support</strong> – Dedicated assistance team available around the clock</li>
+        <li><strong>Mobile Optimized</strong> – Seamless experience across all devices and platforms</li>
+        <li><strong>Fair Competition</strong> – Transparent systems ensuring equitable gameplay</li>
+        <li><strong>Community Hub</strong> – Connect with elite players in exclusive forums</li>
+      </ul>
+    </section>
+
+    <!-- How to Start -->
+    <section class="section">
+      <h2 class="section-title">Getting Started</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="card-icon">1️⃣</div>
+          <h3 class="card-title">Create Account</h3>
+          <p class="card-text">Complete secure registration with verification for protected access.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">2️⃣</div>
+          <h3 class="card-title">Select Games</h3>
+          <p class="card-text">Choose from curated selection of premium skill-based competitions.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">3️⃣</div>
+          <h3 class="card-title">Compete</h3>
+          <p class="card-text">Enter tournaments, demonstrate expertise, and achieve excellence.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Disclaimer -->
+    <div class="disclaimer">
+      <p class="disclaimer-text">⚠️ Platform restricted to adults 18+ | Skill-based gaming platform</p>
+    </div>
+
+    <div class="section">
+      <div class="card">
+        <p class="card-text">
+          <strong>Responsible Gaming:</strong> Barakunda promotes balanced gaming practices. Establish personal boundaries, maintain healthy habits, and prioritize well-being. Professional support available for any concerns.
+        </p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="#" onclick="showPage('privacy')" class="footer-link">Privacy Policy</a>
+        <a href="#" onclick="showPage('terms')" class="footer-link">Terms & Conditions</a>
+        <a href="#" onclick="showPage('contact')" class="footer-link">Contact Us</a>
+      </div>
+      <div class="footer-copyright">
+        © 2024 Barakunda. All Rights Reserved.<br>
+        Premium Skill-Based Gaming Platform
+      </div>
+    </footer>
+  </main>
+
+  <!-- Privacy Policy Page -->
+  <div id="privacy-page" class="legal-page">
+    <div class="legal-header">
+      <button class="back-btn" onclick="showPage('home')">←</button>
+      <h1 class="legal-title">Privacy Policy</h1>
+    </div>
+    <div class="legal-content">
+      <div class="legal-section">
+        <h3>Information Collection</h3>
+        <p>Barakunda collects registration details including name, email, phone number, and date of birth. We gather device information and gameplay statistics to enhance platform performance and user experience.</p>
+      </div>
+      <div class="legal-section">
+        <h3>Information Usage</h3>
+        <p>Your data enables account management, identity verification, service delivery, security enhancement, and communication regarding platform updates and tournaments.</p>
+      </div>
+      <div class="legal-section">
+        <h3>Data Protection</h3>
+        <p>We implement advanced encryption, secure servers, and regular security audits. Your information remains confidential and protected with industry-leading protocols.</p>
+      </div>
+      <div class="legal-section">
+        <h3>User Rights</h3>
+        <p>You may access, correct, or request deletion of personal information. Contact our support team to exercise these rights.</p>
+      </div>
+      <div class="legal-section">
+        <p style="text-align: center; margin-top: 2rem; color: rgba(255,255,255,0.6);">Last Updated: January 2025</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Terms & Conditions Page -->
+  <div id="terms-page" class="legal-page">
+    <div class="legal-header">
+      <button class="back-btn" onclick="showPage('home')">←</button>
+      <h1 class="legal-title">Terms & Conditions</h1>
+    </div>
+    <div class="legal-content">
+      <div class="legal-section">
+        <h3>Acceptance of Terms</h3>
+        <p>Accessing Barakunda constitutes agreement to these Terms and Conditions. Continued use indicates acceptance of all provisions.</p>
+      </div>
+      <div class="legal-section">
+        <h3>Eligibility Requirements</h3>
+        <ul>
+          <li>Minimum age of 18 years</li>
+          <li>Legal capacity for binding agreements</li>
+          <li>Accurate registration information</li>
+          <li>Single account per individual</li>
+          <li>Compliance with local regulations</li>
+        </ul>
+      </div>
+      <div class="legal-section">
+        <h3>Platform Usage</h3>
+        <p>Barakunda provides skill-based gaming where outcomes depend on player expertise, strategy, and decision-making. All games feature transparent mechanics and equitable competition standards.</p>
+      </div>
+      <div class="legal-section">
+        <h3>Prohibited Activities</h3>
+        <ul>
+          <li>Unauthorized automation or cheating</li>
+          <li>Multiple account creation</li>
+          <li>Platform manipulation attempts</li>
+          <li>Harassment or inappropriate conduct</li>
+          <li>Providing false information</li>
+        </ul>
+      </div>
+      <div class="legal-section">
+        <h3>Liability</h3>
+        <p>Barakunda provides services without warranties. We are not liable for indirect damages. Total liability is limited to amounts paid within the preceding 12 months.</p>
+      </div>
+      <div class="legal-section">
+        <p style="text-align: center; margin-top: 2rem; color: rgba(255,255,255,0.6);">Last Updated: January 2025</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Page -->
+  <div id="contact-page" class="legal-page">
+    <div class="legal-header">
+      <button class="back-btn" onclick="showPage('home')">←</button>
+      <h1 class="legal-title">Contact Us</h1>
+    </div>
+    <div class="legal-content">
+      <div class="legal-section">
+        <h3>Customer Support</h3>
+        <p>Our professional support team provides 24/7 assistance for all platform inquiries, technical issues, and account matters.</p>
+        <ul>
+          <li><strong>Email:</strong> support@barakunda.com</li>
+          <li><strong>Response Time:</strong> Within 24 hours</li>
+          <li><strong>Live Chat:</strong> Available in-app</li>
+        </ul>
+      </div>
+      <div class="legal-section">
+        <h3>Community</h3>
+        <p>Join our exclusive Telegram community for updates, tournaments, and player discussions.</p>
+        <ul>
+          <li><strong>Telegram:</strong> <a href="https://t.me/+x2Caz7Kaq6k4NmI1" target="_blank" style="color: var(--gold-primary);">Official Channel</a></li>
+        </ul>
+      </div>
+      <div class="legal-section">
+        <h3>Business Inquiries</h3>
+        <p>For partnership opportunities and media inquiries, contact our business development team.</p>
+        <ul>
+          <li><strong>Business Email:</strong> business@barakunda.com</li>
+        </ul>
+      </div>
+      <div class="legal-section">
+        <h3>Technical Support</h3>
+        <p>For technical assistance, provide device details, browser information, and issue description with relevant screenshots.</p>
+        <ul>
+          <li><strong>Technical Email:</strong> tech@barakunda.com</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Page Navigation
+    function showPage(page) {
+      document.getElementById('home-page').style.display = page === 'home' ? 'block' : 'none';
+      document.getElementById('privacy-page').className = page === 'privacy' ? 'legal-page active' : 'legal-page';
+      document.getElementById('terms-page').className = page === 'terms' ? 'legal-page active' : 'legal-page';
+      document.getElementById('contact-page').className = page === 'contact' ? 'legal-page active' : 'legal-page';
+      
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      closeMenu();
+    }
+
+    // Mobile Menu Toggle
+    function toggleMenu() {
+      const nav = document.getElementById('nav');
+      const hamburger = document.getElementById('hamburger');
+      nav.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    }
+
+    function closeMenu() {
+      document.getElementById('nav').classList.remove('active');
+      document.getElementById('hamburger').classList.remove('active');
+    }
+
+    // Close menu on outside click
+    document.addEventListener('click', (e) => {
+      const nav = document.getElementById('nav');
+      const hamburger = document.getElementById('hamburger');
+      if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+        closeMenu();
+      }
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href !== '#' && !href.includes('privacy') && !href.includes('terms') && !href.includes('contact')) {
+          e.preventDefault();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
